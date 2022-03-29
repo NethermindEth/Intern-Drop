@@ -9,7 +9,7 @@ contract mintNFTDrop is Ownable, ERC1155 {
     constructor() public ERC1155("") {}
     
     function mintNFT()
-        public onlyOwner
+        external onlyOwner
     {
         _setURI("https://gateway.ipfs.io/ipfs/QmfFHTMrf9H896Q1VHxWyfuQDBu2wX4pce71dMgLZRzFL1");
         _mint(msg.sender, 1, 100, "");
